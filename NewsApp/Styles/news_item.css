@@ -1,0 +1,61 @@
+﻿body {
+    overflow: auto !important;
+}
+
+#formDiv {
+    margin: 10px;
+}
+
+#errorMessageDiv {
+    display: table;
+    margin: 0 auto;
+}
+
+#errorMessageTextDiv {
+    margin-top: 28px;
+}
+
+.newsFooter {
+    background-color: #fafafa;
+}
+
+#likesSectionDiv {
+    white-space: nowrap;
+}
+
+.likeButtonImg {
+    width: 21px;
+    height: 18px;
+}
+
+.likeButtonSpan {
+    padding: 3px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.likesSpan {
+    display: inline-block;
+    margin: 6px 0 6px 6px;
+    vertical-align: top;
+    white-space: pre-wrap;
+}
+
+#commentsSectionDiv {
+    padding: 3px;
+}
+
+.commentsSpan {
+    display: inline-block;
+    margin: 6px 0 6px 0;
+    vertical-align: top;
+}
+
+.sectionTopSeparator {
+    margin-top: 10px;
+}
+
+.sectionSeparator {
+    margin: 10px 0 10px 0;
+}

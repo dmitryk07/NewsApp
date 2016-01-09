@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ClientWebPart Name="News" Title="$Resources:WebParts_News_Title" Description="$Resources:WebParts_News_Description">
+    <Content Type="html" Src="~appWebUrl/Pages/News.aspx?ItemsLimit=_ItemsLimit_" />
+    <Properties>
+      <Property Name="ItemsLimit"
+                WebDisplayName="$Resources:WebPartProperties_ItemsLimit_Title;"
+                WebDescription="$Resources:WebPartProperties_ItemsLimit_Description;"
+                Type="int"
+                DefaultValue="10"
+                RequiresDesignerPermission="true" />
+    </Properties>
+  </ClientWebPart>
+</Elements>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="ba02abcf-425c-402b-94fc-b8ee44c445db" 
+        solutionId="ba02abcf-425c-402b-94fc-b8ee44c445db" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="NewsApp"
+        sharePointProductVersion="15.0">
+  <features>
+        <featureReference itemId="0ebb388e-aea3-42ed-99f2-f830aab37ae3" />
+  </features>
+</package>

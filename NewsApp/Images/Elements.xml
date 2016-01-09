@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Images">
+    <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\AddLikeDisabledIcon.png" Url="Images/AddLikeDisabledIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\AddLikeIcon.png" Url="Images/AddLikeIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\RemoveLikeDisabledIcon.png" Url="Images/RemoveLikeDisabledIcon.png" ReplaceContent="TRUE" />
+    <File Path="Images\RemoveLikeIcon.png" Url="Images/RemoveLikeIcon.png" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

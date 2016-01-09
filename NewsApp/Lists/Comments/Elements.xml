@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate Name="Comments"
+                DisplayName="$Resources:Lists_Comments_Title;"
+                Description="$Resources:Lists_Comments_Description;"
+                Type="10001"
+                BaseType="0"
+                OnQuickLaunch="TRUE"
+                SecurityBits="22"
+                Sequence="410"
+                Image="/_layouts/15/images/itgen.png"
+                Hidden="TRUE" />
+
+  <Field ID="{debc3e6e-18c7-4059-b2bf-d5211630e264}"
+         Name="CommentsItemNews"
+         DisplayName="$Resources:Fields_CommentsItemNews_Title;"
+         Type="Lookup"
+         List="Lists/News"
+         ShowField="Title"
+         Required="TRUE"
+         Group="_Hidden" />
+
+  <Field ID="{ac9f87d0-6304-47ad-9458-57c77bb5cf6c}"
+         Name="CommentsItemComment"
+         DisplayName="$Resources:Fields_CommentsItemComment_Title;"
+         Type="Note"
+         Required="TRUE"
+         MaxLength="512"
+         Group="_Hidden" />
+</Elements>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate Name="Likes"
+                DisplayName="$Resources:Lists_Likes_Title;"
+                Description="$Resources:Lists_Likes_Description;"
+                Type="10002"
+                BaseType="0"
+                OnQuickLaunch="TRUE"
+                SecurityBits="22"
+                Sequence="410"
+                Image="/_layouts/15/images/itgen.png"
+                Hidden="TRUE" />
+
+  <Field ID="{9b9bbf79-d2ee-40b6-9967-1150c08e2a79}"
+         Name="LikesItemNews"
+         DisplayName="$Resources:Fields_LikesItemNews_Title;"
+         Type="Lookup"
+         List="Lists/News"
+         ShowField="Title"
+         Required="TRUE"
+         Group="_Hidden" />
+</Elements>

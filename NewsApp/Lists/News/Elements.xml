@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListTemplate Name="News"
+                DisplayName="$Resources:Lists_News_Title;"
+                Description="$Resources:Lists_News_Description;"
+                Type="10000"
+                BaseType="0"
+                OnQuickLaunch="TRUE"
+                SecurityBits="11"
+                Sequence="410"
+                Image="/_layouts/15/images/itgen.png"
+                Hidden="TRUE" />
+
+  <Field ID="{30497f29-3292-4b95-8940-4c597e2c639b}"
+         Name="NewsItemShortPart"
+         DisplayName="$Resources:Fields_NewsItemShortPart_Title;"
+         Type="Note"
+         RichText="TRUE"
+         RichTextMode="FullHtml"
+         Required="TRUE"
+         Group="_Hidden" />
+
+  <Field ID="{c4778f4d-6ec2-411a-8563-24d9923b85c0}"
+         Name="NewsItemMainContent"
+         DisplayName="$Resources:Fields_NewsItemMainContent_Title;"
+         Type="Note"
+         RichText="TRUE"
+         RichTextMode="FullHtml"
+         Required="TRUE"
+         Group="_Hidden" />
+
+  <Field ID="{87e0a1af-8476-40e6-944a-9ba5156a0b5e}"
+         Name="NewsItemExpiresOn"
+         DisplayName="$Resources:Fields_NewsItemExpiresOn_Title;"
+         Type="DateTime"
+         Required="FALSE"
+         Format="DateOnly"
+         Group="_Hidden" />
+
+  <Field ID="{1a329df2-173f-4958-ad86-b666b92c648d}"
+         Name="NewsItemAllowLikes"
+         DisplayName="$Resources:Fields_NewsItemAllowLikes_Title;"
+         Type="Boolean"
+         Group="_Hidden">
+    <Default>1</Default>
+  </Field>
+
+  <Field ID="{adb5b81e-d85b-4aa9-8a69-20772799ecde}"
+         Name="NewsItemAllowComments"
+         DisplayName="$Resources:Fields_NewsItemAllowComments_Title;"
+         Type="Boolean"
+         Group="_Hidden">
+    <Default>1</Default>
+  </Field>
+</Elements>

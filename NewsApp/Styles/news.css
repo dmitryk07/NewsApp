@@ -1,0 +1,67 @@
+﻿body {
+    overflow: auto !important;
+}
+
+#formDiv[page_content=true] {
+    margin: 10px;
+}
+
+#formDiv[page_content=false] {
+    padding-bottom: 100px;
+}
+
+#errorMessageDiv {
+    display: table;
+}
+
+#formDiv[page_content=true] > #errorMessageDiv {
+    margin: 0 auto;
+}
+
+#errorMessageTextDiv {
+    margin-top: 28px;
+}
+
+.newsFooter {
+    background-color: #fafafa;
+    white-space: nowrap;
+}
+
+.likeButtonImg {
+    width: 21px;
+    height: 18px;
+}
+
+.likeButtonSpan {
+    padding: 3px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.likesCountButton {
+    display: inline-block;
+    margin: 6px 0 6px 25px;
+    vertical-align: top;
+}
+
+.commentsCountSpan, .commentsCountSpanAfterLikes {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.commentsCountSpan {
+    margin: 6px 0 6px 25px;
+}
+
+.commentsCountSpanAfterLikes {
+    margin: 6px 0 6px 3px;
+}
+
+.sectionSeparator {
+    margin: 0 0 15px 0;
+}
+
+.sectionTopSeparator {
+    margin-top: 10px;
+}

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns="http://schemas.microsoft.com/sharepoint/"
+      xmlns:ows="Microsoft SharePoint"
+      Title="$Resources:Lists_News_Title;"
+      Direction="$Resources:Direction;"
+      DisableAttachments="TRUE"
+      FolderCreation="FALSE"
+      Url="Lists/News"
+      BaseType="0">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x01"
+                   Name="NewsItem"
+                   Inherits="TRUE"
+                   Version="0">
+        <FieldRefs>
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{30497f29-3292-4b95-8940-4c597e2c639b}" Name="NewsItemShortPart" />
+          <FieldRef ID="{c4778f4d-6ec2-411a-8563-24d9923b85c0}" Name="NewsItemMainContent" />
+          <FieldRef ID="{87e0a1af-8476-40e6-944a-9ba5156a0b5e}" Name="NewsItemExpiresOn" />
+          <FieldRef ID="{1a329df2-173f-4958-ad86-b666b92c648d}" Name="NewsItemAllowLikes" />
+          <FieldRef ID="{adb5b81e-d85b-4aa9-8a69-20772799ecde}" Name="NewsItemAllowComments" />
+        </FieldRefs>
+        <Folder TargetName="Item" />
+      </ContentType>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field ID="{30497f29-3292-4b95-8940-4c597e2c639b}"
+             Name="NewsItemShortPart"
+             DisplayName="$Resources:Fields_NewsItemShortPart_Title;"
+             Description="$Resources:Fields_NewsItemShortPart_Description;"
+             Type="Note"
+             RichText="TRUE"
+             RichTextMode="FullHtml"
+             Required="TRUE" />
+      <Field ID="{c4778f4d-6ec2-411a-8563-24d9923b85c0}"
+             Name="NewsItemMainContent"
+             DisplayName="$Resources:Fields_NewsItemMainContent_Title;"
+             Description="$Resources:Fields_NewsItemMainContent_Description;"
+             Type="Note"
+             RichText="TRUE"
+             RichTextMode="FullHtml"
+             Required="TRUE" />
+      <Field ID="{87e0a1af-8476-40e6-944a-9ba5156a0b5e}"
+             Name="NewsItemExpiresOn"
+             DisplayName="$Resources:Fields_NewsItemExpiresOn_Title;"
+             Description="$Resources:Fields_NewsItemExpiresOn_Description;"
+             Type="DateTime"
+             Required="FALSE"
+             Format="DateOnly"
+             Indexed="TRUE" />
+      <Field ID="{1a329df2-173f-4958-ad86-b666b92c648d}"
+             Name="NewsItemAllowLikes"
+             DisplayName="$Resources:Fields_NewsItemAllowLikes_Title;"
+             Type="Boolean">
+        <Default>1</Default>
+      </Field>
+      <Field ID="{adb5b81e-d85b-4aa9-8a69-20772799ecde}"
+             Name="NewsItemAllowComments"
+             DisplayName="$Resources:Fields_NewsItemAllowComments_Title;"
+             Type="Boolean">
+        <Default>1</Default>
+      </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID" />
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitle" />
+          <FieldRef Name="NewsItemExpiresOn" />
+          <FieldRef Name="NewsItemAllowLikes" />
+          <FieldRef Name="NewsItemAllowComments" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID" />
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>
